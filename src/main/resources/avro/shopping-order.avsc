@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "ShoppingOrder",
+  "namespace": "com.arav.play.kafka_consumer.avro",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "customerName", "type": "string" },
+    { "name": "product", "type": "string" },
+    { "name": "quantity", "type": "int" },
+    { "name": "price", "type": "double" }
+  ]
+}
