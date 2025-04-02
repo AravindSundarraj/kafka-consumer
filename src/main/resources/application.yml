@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: pkc-619z3.us-east1.gcp.confluent.cloud:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+      key.serializer: org.apache.kafka.common.serialization.StringSerializer
+      value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      specific.avro.reader: true
+    consumer:
+      group-id: shopping-order-group
+      auto-offset-reset: earliest
+
